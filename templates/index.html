@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ComicCraft - Create Your Comic</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><div class="wrap"><form class="box" method="post" action="/generate" id="f">
+<h1>✒️ Create Your Comic</h1>
+{% if error %}<div class="err">{{ error }}</div>{% endif %}
+<label for="prompt">Story Prompt:</label>
+<textarea id="prompt" name="prompt" required minlength="3" maxlength="500" placeholder="A brave fox explores an enchanted forest.">{{ form.prompt or '' }}</textarea>
+<label for="character">Main Character Name:</label>
+<input id="character" name="character" maxlength="40" required placeholder="Finn" value="{{ form.character or '' }}">
+<label for="setting">Setting:</label>
+<select id="setting" name="setting">{% for s in settings %}<option {{ 'selected' if form.setting==s }}>{{ s }}</option>{% endfor %}</select>
+<label for="tone">Story Tone:</label>
+<select id="tone" name="tone">{% for t in tones %}<option {{ 'selected' if form.tone==t }}>{{ t }}</option>{% endfor %}</select>
+<label for="art_style">Art Style:</label>
+<select id="art_style" name="art_style">{% for a in styles %}<option {{ 'selected' if form.art_style==a }}>{{ a }}</option>{% endfor %}</select>
+<button class="btn" id="go" type="submit">Generate Comic</button>
+</form></div>
+<script>document.getElementById('f').addEventListener('submit',function(){var b=document.getElementById('go');setTimeout(function(){b.disabled=true;b.textContent='Generating... please wait (1-2 minutes, images are made one by one)';},10);});</script>
+</body></html>

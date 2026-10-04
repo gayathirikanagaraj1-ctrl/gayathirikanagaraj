@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ comic.title }} - ComicCraft</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><div class="page">
+<h1>📖 Your Comic Preview</h1><p class="ptitle">{{ comic.title }}</p>
+{% if comic.demo %}<div class="note" style="margin-top:14px">{{ comic.notice }}</div>{% endif %}
+{% for p in comic.panels %}
+<article class="panel">
+<h3>Panel {{ p.number }}: {{ p.title }}</h3>
+<img src="data:image/jpeg;base64,{{ p.image_b64 }}" alt="{{ p.title }}">
+<div class="scene">{{ p.scene }}</div>
+<div class="meta"><b>CAPTION:</b> {{ p.caption }}</div>
+<div class="meta"><b>NARRATION:</b> {{ p.narration }}</div>
+<div class="meta"><b>IMAGE PROMPT:</b> {{ p.image_prompt }}</div>
+</article>{% endfor %}
+<a class="btn" id="dl" href="/comic/{{ comic.id }}/pdf" download>📥 Download Your Comic as PDF</a>
+<a class="btn alt" href="/">← Create Another Comic</a>
+</div>
+<script>document.getElementById('dl').addEventListener('click',function(){setTimeout(function(){location.href='/export-success';},1500);});</script>
+</body></html>

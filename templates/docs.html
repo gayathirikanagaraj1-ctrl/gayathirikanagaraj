@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ComicCraft API</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><div class="wrap"><div class="box" style="max-width:640px"><h1>ComicCraft API Endpoints</h1>
+<div class="ep"><b>GET</b> / &nbsp;Home page (form)</div>
+<div class="ep"><b>POST</b> /generate &nbsp;Form to comic preview page</div>
+<div class="ep"><b>POST</b> /generate-comic/json &nbsp;JSON in, JSON out<br>{"prompt":"A brave fox...","character":"Finn","setting":"Forest","tone":"Dramatic","art_style":"Realistic"}</div>
+<div class="ep"><b>GET</b> /comic/&lt;id&gt;/pdf &nbsp;Download PDF</div>
+<div class="ep"><b>GET</b> /export-success &nbsp;Export success page</div>
+<div class="ep"><b>GET</b> /test-image &nbsp;Test image backend</div>
+<div class="ep"><b>GET</b> /api/health &nbsp;Key / model status</div>
+<a class="btn alt" href="/">← Home</a></div></div></body></html>

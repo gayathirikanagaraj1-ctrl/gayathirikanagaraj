@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ComicCraft</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><div class="wrap"><div class="box ok">
+{% if missing %}<h1>Comic not found</h1><p>This comic expired (the server was restarted). Please create it again.</p>
+{% else %}<div class="tick">✅</div><h1>Comic Exported Successfully!</h1><p>Your comic PDF has been downloaded to your device. You can view or share it offline.</p>{% endif %}
+<a class="btn" href="/">Create Another Comic</a></div></div></body></html>

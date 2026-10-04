@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8a98f"/><stop offset=".45" stop-color="#7fb0bd"/><stop offset="1" stop-color="#2f6f86"/></linearGradient>
+<linearGradient id="w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f8aa0"/><stop offset="1" stop-color="#1f4f63"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#s)"/>
+<polygon points="0,520 120,260 230,330 330,170 430,320 520,420 520,900 0,900" fill="#5f8fa3"/>
+<polygon points="1600,540 1500,250 1380,330 1270,150 1170,340 1080,430 1080,900 1600,900" fill="#5a899e"/>
+<polygon points="300,560 520,380 700,520 900,400 1100,540 1300,430 1600,600 1600,900 300,900" fill="#3f7389"/>
+<rect y="640" width="1600" height="260" fill="url(#w)"/>
+<g fill="#1c4a52"><polygon points="40,700 90,470 140,700"/><polygon points="110,720 170,440 230,720"/><polygon points="200,700 250,500 300,700"/><polygon points="260,730 330,430 400,730"/><polygon points="1300,700 1350,480 1400,700"/><polygon points="1370,720 1440,420 1510,720"/><polygon points="1470,700 1520,500 1570,700"/><polygon points="1220,730 1280,470 1340,730"/></g>
+<rect y="760" width="1600" height="140" fill="#17383f" opacity=".55"/>
+</svg>
